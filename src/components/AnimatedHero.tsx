@@ -1,11 +1,11 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Mail, GraduationCap, MapPin, BookOpen } from 'lucide-react';
 import Image from 'next/image';
 
 export default function AnimatedHero() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,12 +16,12 @@ export default function AnimatedHero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
-  const photoVariants = {
+  const photoVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8, rotate: -5 },
     visible: { 
       opacity: 1, 
